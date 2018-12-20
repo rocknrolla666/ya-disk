@@ -1,0 +1,6 @@
+@import '../node_modules/bootstrap-css-only/css/bootstrap.min.css';
+@import '../node_modules/font-awesome/css/font-awesome.min.css';
+
+.cursor-pointer {
+    cursor: pointer;
+}

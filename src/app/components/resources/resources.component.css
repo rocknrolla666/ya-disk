@@ -1,0 +1,8 @@
+.icon-margin {
+    margin-right: 4px;
+}
+
+.file-display {
+    display: flex;
+    justify-content: space-between;
+}

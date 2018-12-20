@@ -1,0 +1,15 @@
+<app-breadcrumbs [items]="breadcrumbsItems"
+                 (itemClicked)="onFolderChange($event)">
+</app-breadcrumbs>
+
+<app-resources [items]="(itemsData$ | async).items"
+               (folderClicked)="onFolderChange($event)">
+
+</app-resources>
+<ngb-pagination *ngIf="(itemsData$ | async).total as total"
+                class="pager"
+                [collectionSize]="total"
+                [maxSize]="maxPages"
+                [(page)]="page"
+                (pageChange)="onPageChange()">
+</ngb-pagination>

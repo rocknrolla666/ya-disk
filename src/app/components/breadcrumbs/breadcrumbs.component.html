@@ -1,0 +1,8 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page" *ngFor="let item of items; let last = last">
+            <span *ngIf="!last" (click)="itemClicked.emit(item)" class="cursor-pointer">{{item.name}}</span>
+            <span *ngIf="last">{{item.name}}</span>
+        </li>
+    </ol>
+</nav>

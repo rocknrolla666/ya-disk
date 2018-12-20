@@ -1,0 +1,19 @@
+<ul class="list-group">
+    <li *ngFor="let item of items" class="list-group-item">
+        <div *ngIf="item.type === 'dir'" class="cursor-pointer" (click)="folderClicked.emit(item)">
+            <i class="fa fa-folder-o icon-margin" aria-hidden="true"></i>
+            <span>{{item.name}}</span>
+        </div>
+        <div *ngIf="item.type !== 'dir'" class="file-display">
+            <div>
+                <i class="fa fa-file-o icon-margin" aria-hidden="true"></i>
+                <span>{{item.name}}</span>
+            </div>
+            <span>{{item.size | formatFileSize}}</span>
+        </div>
+    </li>
+</ul>
+
+<div *ngIf="items.length === 0" style="text-align: center">
+    <span>Каталог пуст</span>
+</div>
